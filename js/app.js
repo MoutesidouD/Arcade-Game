@@ -40,17 +40,17 @@ Player.prototype.render = function() {
 };
 
 Player.prototype.handleInput = function(key){ //relative values.need to be fixed
-  if(key ==='left'){
-    this.x += 100;
+  if(key ==='left' && this.x > 0){
+    this.x -= 101;
   }
-  if(key === 'right'){
-    this.x -= 100;
+  if(key === 'right' && this.x <400){
+    this.x += 101;
   }
-  if(key === 'up'){
-    this.y += 80;
+  if(key === 'up' && this.y > 0 ){
+    this.y -= 83;
   }
-  if(key === 'down'){
-    this.y -= 80;
+  if(key === 'down' && this.y < 400 ){
+    this.y += 83;
   }
 
 }
