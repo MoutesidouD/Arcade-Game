@@ -39,10 +39,15 @@ var Player= function(x, y) {
   this.sprite= 'images/char-pink-girl.png';
 };
 
-//Updates player's position
+//Determines when the game is won
 Player.prototype.update= function(){
 
-};
+    if(this.y<=0){
+      setTimeout(function(){
+      player.x=202;
+      player.y=405;
+    },600);
+}};
 
 //Draws player on screen
 Player.prototype.render = function() {
@@ -78,7 +83,6 @@ enemiesY.forEach(function(y) {
     enemy = new Enemy(-101, y, 100 + Math.floor(Math.random() * 300));
     allEnemies.push(enemy);
 });
-
 
 
 
