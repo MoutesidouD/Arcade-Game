@@ -18,6 +18,13 @@ Enemy.prototype.update = function(dt) {
     } else {
       this.x = -100; //set enemy back to start once complete its run
     }
+
+    //check for collisions
+    if (player.x< (this.x +80) && (player.x +80)> this.x &&
+    player.y< (this.y + 70) && (player.y + 70) > this.y){
+           player.x=202;
+           player.y=405;
+         }
 };
 
 // Draw the enemy on the screen, required method for game
