@@ -44,10 +44,11 @@ Player.prototype.update= function(){
 
     if(this.y<=0){
       setTimeout(function(){
-      player.x=202;
-      player.y=405;
-    },600);
-}};
+        player.x=202;
+        player.y=405;
+      },600);
+}
+};
 
 //Draws player on screen
 Player.prototype.render = function() {
@@ -70,7 +71,7 @@ Player.prototype.handleInput = function(allowedKeys){
     this.y += 83;
   }
 
-}
+};
 
 // Now instantiate your objects.
 var player= new Player(202,405);// Place the player object in a variable called player
@@ -83,9 +84,6 @@ enemiesY.forEach(function(y) {
     enemy = new Enemy(-101, y, 100 + Math.floor(Math.random() * 300));
     allEnemies.push(enemy);
 });
-
-
-
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
